@@ -24,8 +24,8 @@ class Aspirasi extends Model
         return $this->belongsTo(Kategori::class, 'kategori_id');
     }
 
-    public function feedbacks()
+    public function feedback()
     {
-        return $this->hasMany(Feedback::class, 'aspirasi_id');
+        return $this->hasMany(Feedback::class, 'aspirasi_id', 'id');
     }
 }
