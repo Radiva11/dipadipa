@@ -9,9 +9,6 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    // HAPUS method __construct() - TIDAK PERLU DIPAKAI
-
-    // Menampilkan daftar semua user
     public function index()
     {
         // Cek apakah user sudah login dan role admin
@@ -55,19 +52,18 @@ class UserController extends Controller
     // Menghapus user
     public function destroy($id)
     {
-        // Cek apakah user sudah login dan role admin
         if (!Auth::check() || Auth::user()->role !== 'admin') {
             return redirect('/login')->with('error', 'Silakan login sebagai admin!');
         }
 
         $user = User::findOrFail($id);
 
-        // Cegah hapus admin
+    
         if ($user->role === 'admin') {
             return back()->with('error', 'Tidak dapat menghapus user admin!');
         }
 
-        // Cegah hapus diri sendiri
+       
         if ($user->id === Auth::id()) {
             return back()->with('error', 'Tidak dapat menghapus akun sendiri!');
         }
@@ -76,3 +72,5 @@ class UserController extends Controller
         return back()->with('success', 'User berhasil dihapus.');
     }
 }
+
+

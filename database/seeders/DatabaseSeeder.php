@@ -11,28 +11,26 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        // 1. BUAT ADMIN
         User::firstOrCreate(
             ['username' => 'admin'],
             [
                 'name' => 'Administrator',
-                'kelas' => 'ADMIN', // Sesuaikan dengan pilihan di dropdown login
-                'role' => 'admin',
+                'kelas' => 'ADMIN', 
                 'password' => Hash::make('admin123'),
+                'role' => 'admin'
             ]
         );
 
-        // 2. BUAT SISWA CONTOH (Sesuai Dropdown)
         $users = [
             [
                 'username' => 'siswa1',
                 'name' => 'Radiva Aulia Putri',
-                'kelas' => 'X', // Harus sama persis dengan <option value="X">
+                'kelas' => 'X',
                 'password' => Hash::make('siswa123'),
                 'role' => 'siswa'
             ],
             [
-                'username' => 'siswa2',
+                'username' => 'Siswa2',
                 'name' => 'Nabila Varisha',
                 'kelas' => 'VII',
                 'password' => Hash::make('siswa123'),
@@ -40,11 +38,20 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'username' => 'siswa3',
-                'name' => 'Rizky Pratama',
+                'name' => 'Raisya Aninditia',
                 'kelas' => 'VII',
                 'password' => Hash::make('siswa123'),
                 'role' => 'siswa'
             ],
+
+             [
+                'username' => 'siswa4',
+                'name' => 'Rizky Wahyu',
+                'kelas' => 'VIII',
+                'password' => Hash::make('siswa123'),
+                'role' => 'siswa'
+            ],
+
         ];
 
         foreach ($users as $user) {

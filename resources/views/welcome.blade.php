@@ -111,7 +111,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                LAPSEKAR - SMPN 5 TANGERANG
+                LAPSEKAR - SMPN 5 Kota Tangerang 
             </a>
             <div class="ms-auto">
                 <a href="{{ route('login') }}" class="btn btn-light btn-sm fw-bold px-4 py-2" style="color: var(--primary-blue); border-radius: 20px;">

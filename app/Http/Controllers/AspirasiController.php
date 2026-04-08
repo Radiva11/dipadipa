@@ -10,11 +10,9 @@ use Illuminate\Support\Facades\Auth;
 class AspirasiController extends Controller
 {
     public function index() {
-        // Mengambil kategori untuk dropdown form
         $kategoris = Kategori::all();
-        // Mengambil histori milik user yang login saja
         $histori = Aspirasi::where('siswa_id', Auth::id())
-            ->with(['kategori', 'feedbacks'])
+            ->with(['kategori', 'feedback'])
             ->latest()
             ->get();
 
@@ -24,7 +22,7 @@ class AspirasiController extends Controller
     public function store(Request $request) {
         $request->validate([
             'kategori_id' => 'required|exists:kategoris,id',
-            'lokasi' => 'required|string|max:50', // Sesuai panjang varchar di soal [cite: 70]
+            'lokasi' => 'required|string|max:50', 
             'keterangan' => 'required|string|max:255'
         ]);
 
@@ -33,9 +31,10 @@ class AspirasiController extends Controller
             'kategori_id' => $request->kategori_id,
             'lokasi' => $request->lokasi,
             'keterangan' => $request->keterangan,
-            'status' => 'menunggu' // Status awal enum [cite: 74]
+            'status' => 'menunggu'
         ]);
 
         return back()->with('success', 'Aspirasi berhasil dikirim!');
     }
 }
+ 

@@ -44,7 +44,6 @@ class KategoriController extends Controller
     {
         $kategori = Kategori::findOrFail($id);
 
-        // Cek apakah kategori masih digunakan
         if ($kategori->aspirasis()->count() > 0) {
             return back()->with('error', 'Kategori tidak bisa dihapus karena masih digunakan oleh aspirasi!');
         }
