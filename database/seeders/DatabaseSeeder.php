@@ -44,10 +44,26 @@ class DatabaseSeeder extends Seeder
                 'role' => 'siswa'
             ],
 
-             [
+            [
                 'username' => 'siswa4',
                 'name' => 'Rizky Wahyu',
                 'kelas' => 'VIII',
+                'password' => Hash::make('siswa123'),
+                'role' => 'siswa'
+            ],
+
+            [
+                'username' => 'siswa5',
+                'name' => 'Muhamad Ridho',
+                'kelas' => 'VII',
+                'password' => Hash::make('siswa123'),
+                'role' => 'siswa'
+            ],
+
+            [
+                'username' => 'siswa6',
+                'name' => 'Muhamad Hanif',
+                'kelas' => 'X',
                 'password' => Hash::make('siswa123'),
                 'role' => 'siswa'
             ],

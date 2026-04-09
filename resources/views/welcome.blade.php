@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LAPSEKAR - SMPN 5 Tangerang</title>
 
-    <link rel="icon" type="image/png" href="{{ asset('assets/img/logo-sekolah.png') }}">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -113,12 +111,6 @@
             <a class="navbar-brand" href="#">
                 LAPSEKAR - SMPN 5 Kota Tangerang 
             </a>
-            <div class="ms-auto">
-                <a href="{{ route('login') }}" class="btn btn-light btn-sm fw-bold px-4 py-2" style="color: var(--primary-blue); border-radius: 20px;">
-                    LOG IN
-                </a>
-            </div>
-        </div>
     </nav>
 
     <div class="container hero-container">
@@ -127,10 +119,10 @@
                 <h4 class="text-uppercase fw-bold mb-2" style="letter-spacing: 2px; color: #368eeb;">Layanan Pengaduan</h4>
                 <h1 class="display-3 fw-bold mb-4">LAPSEKAR</h1>
                 <p class="lead mb-5" style="opacity: 0.9;">
-                    Sampaikan aspirasi dan laporan kerusakan sarana prasarana sekolah demi kenyamanan belajar mengajar di SMPN 5 Tangerang.
+                    Sampaikan aspirasi dan laporkan kerusakan sarana prasarana sekolah demi kenyamanan belajar mengajar di SMPN 5 Tangerang.
                 </p>
                 <a href="{{ route('login') }}" class="btn-masuk shadow-lg">
-                    MULAI MELAPOR <i class="fas fa-paper-plane ms-2"></i>
+                    AYO MELAPOR <i class="fas fa-paper-plane ms-2"></i>
                 </a>
             </div>
 
@@ -166,7 +158,7 @@
                                     <h6 class="mb-0 fw-bold me-2">Ruang Kelas</h6>
                                     <span class="status-badge" style="background: #17a2b8;">Proses</span>
                                 </div>
-                                <p class="small text-muted mb-0">"Pintu ruang 28 tidak bisa dikunci dari luar..."</p>
+                                <p class="small text-muted mb-0">"Pintu ruang 11 tidak bisa dikunci dari luar..."</p>
                             </div>
                         </div>
                     </div>
@@ -204,7 +196,7 @@
     <footer class="text-center">
         <div class="container">
             <p class="mb-0">Sistem Pengaduan Sarana Sekolah SMPN 5 Tangerang v1.0</p>
-            <p class="small text-white-50">© 2026 SMPN 5 Tangerang. All Rights Reserved.</p>
+            <p class="small text-white-50">© 2026 SMPN 5 Tangerang.</p>
         </div>
     </footer>
 
