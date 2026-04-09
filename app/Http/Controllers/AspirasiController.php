@@ -12,10 +12,9 @@ class AspirasiController extends Controller
     public function index() {
         $kategoris = Kategori::all();
         $histori = Aspirasi::where('siswa_id', Auth::id())
-            ->with(['kategori', 'feedback'])
-            ->latest()
-            ->get();
-
+        ->with(['kategori', 'feedbacks']) 
+        ->latest()
+        ->get();
         return view('siswa.aspirasi', compact('kategoris', 'histori'));
     }
 

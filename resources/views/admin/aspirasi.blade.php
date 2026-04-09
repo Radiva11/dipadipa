@@ -51,7 +51,7 @@
                                 </tr>
 
                                 <!-- Tampilkan feedback jika ada -->
-                                @if($aspirasi->feedbacks->count() > 0)
+                                @if($aspirasi->feedbacks?->count() > 0)
                                 <tr class="table-light">
                                     <td colspan="9" class="p-3">
                                         <strong class="text-primary">
